@@ -2,9 +2,6 @@
 
 A simple client-server app made with Flutter.
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=6hCZK7rgMbg
-" target="_blank"><img src="http://img.youtube.com/vi/6hCZK7rgMbg/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="360" height="270" border="10" /></a>
 
 ## Table of Contents:
 * [General Info](#general-info)
