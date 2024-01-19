@@ -32,10 +32,6 @@ Get to know what each individual room has to offer
 #### Book a whole trip
 By inputting traveler's info you can book a whole trip
 
-#### Project folders
-Keep your tasks in different project folders
-
-
 ## How to install
 #### Step 1:
 
