@@ -21,6 +21,10 @@ In this project I managed to implement:
 2. Displaying hotel, rooms and booking data
 3. Booking hotel by recieving user input
 
+What could have been done but wasn't:
+1. Proper routing
+2. Image loading and error widgets
+3. Usecases/API/BLoC tests
 
 ## Features
 #### Browse hotels 
