@@ -2,7 +2,7 @@
 
 A simple client-server app made with Flutter.
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ESqu0l5ye7A&t=5s/0.jpg)](https://www.youtube.com/watch?v=ESqu0l5ye7A&t=5s)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ESqu0l5ye7A/0.jpg)](https://www.youtube.com/watch?v=ESqu0l5ye7A)
 
 ## Table of Contents:
 * [General Info](#general-info)
