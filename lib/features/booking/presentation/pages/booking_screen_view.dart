@@ -55,7 +55,7 @@ class _BookingScreenViewState extends State<BookingScreenView> {
           element.isValidated() &&
           _phoneEmailFormKey.currentState!.validate());
     }
-    _phoneEmailFormKey.currentState?.save();
+    // _phoneEmailFormKey.currentState?.save();
 
     return allValid;
   }
@@ -78,26 +78,26 @@ class _BookingScreenViewState extends State<BookingScreenView> {
   /// Creates a new payment event
   /// If event is [PaymentSuccessful] navigates user to another screen
   void _makePayment() {
-    setState(() {});
     var paymentBloc = context.read<PaymentBloc>();
+    bool isValid = _validateAllForms();
     paymentBloc.add(
-      MakePaymentEvent(isValidClient: _validateAllForms()),
+      MakePaymentEvent(isValidClient: isValid),
     );
-    if (paymentBloc.state is PaymentSuccessful) {
-      print('success');
-
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => SuccessfulPaymentScreenView(
-            id: paymentBloc.state.paymentEntity!.id!,
+    paymentBloc.stream.listen((event) async {
+      if (event is PaymentSuccessful) {
+        print('success');
+        await Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => SuccessfulPaymentScreenView(
+              id: paymentBloc.state.paymentEntity!.id!,
+            ),
           ),
-        ),
-      );
-    }
-    if (paymentBloc.state is PaymentFailure) {
-      print('failure');
-    }
+        );
+      } else {
+        print('failure');
+      }
+    });
   }
 
   /// Disposes controllers when not needed to prevent memory leaks

@@ -49,10 +49,10 @@ class _TouristInfoFormWidgetState extends State<TouristInfoFormWidget> {
 
   /// Validates form fields
   bool validate() {
+    setState(() {});
     bool isValid = formKey.currentState!.validate();
     widget.user.firstTry = false;
     if (isValid) formKey.currentState?.save();
-    setState(() {});
     return isValid;
   }
 

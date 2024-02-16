@@ -11,8 +11,8 @@ class GetBookingDataUsecase implements UseCase<DataState<BookingEntity>, void> {
   GetBookingDataUsecase(this._bookingRepository);
 
   @override
-  Future<DataState<BookingEntity>> call({void params}) {
-    return _bookingRepository.getBookingData();
+  Future<DataState<BookingEntity>> call({void params}) async {
+    return await _bookingRepository.getBookingData();
   }
 }
 
@@ -25,7 +25,7 @@ class GetHotelDataUsecase implements UseCase<DataState<HotelEntity>, void> {
 
   @override
   Future<DataState<HotelEntity>> call({void params}) async {
-    return _bookingRepository.getHotelData();
+    return await _bookingRepository.getHotelData();
   }
 }
 
@@ -38,8 +38,8 @@ class GetRoomsDataUseCase
   GetRoomsDataUseCase(this._bookingRepository);
 
   @override
-  Future<DataState<List<RoomEntity>>> call({void params}) {
-    return _bookingRepository.getRoomsData();
+  Future<DataState<List<RoomEntity>>> call({void params}) async {
+    return await _bookingRepository.getRoomsData();
   }
 }
 
@@ -51,7 +51,7 @@ class MakePaymentUseCase implements UseCase<DataState<PaymentEntity>, void> {
   MakePaymentUseCase(this._bookingRepository);
 
   @override
-  Future<DataState<PaymentEntity>> call({void params}) {
-    return _bookingRepository.makePayment();
+  Future<DataState<PaymentEntity>> call({void params}) async {
+    return await _bookingRepository.makePayment();
   }
 }
